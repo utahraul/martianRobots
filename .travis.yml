@@ -1,3 +1,11 @@
+dist: trusty
 language: node_js
 node_js:
-  - "8.12.0"
+    - 8.12.0
+addons:
+    sonarcloud:
+        organization: utahraul
+        token:
+            secure: b842660c3fbc7912c547dff594ced21cae940127
+script:
+    - sonar-scanner
