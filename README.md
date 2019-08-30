@@ -1,5 +1,9 @@
 # Martian Robots
 
+## [Travis build history](https://travis-ci.org/utahraul/martianRobots/builds)
+
+## [SonarCloud analysis](https://sonarcloud.io/organizations/utahraul/projects)
+
 ## The Problem
 The surface of Mars can be modelled by a rectangular grid around which robots are able to
 move according to instructions provided from Earth. You are to write a program that
