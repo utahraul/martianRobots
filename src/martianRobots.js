@@ -1,5 +1,5 @@
 var martianRobots = function (inputString) {
-    console.log(inputString);
+    processInput(inputString);
 };
 
 module.exports = martianRobots;
