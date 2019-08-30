@@ -1,0 +1,23 @@
+{
+    "name": "martianRobots",
+    "description": "martianRobots",
+    "main": "src/martianRobots.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/utahraul/martianRobots.git"
+    },
+    "author": "Raul",
+    "homepage": "https://github.com/utahraul/martianRobots",
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.0",
+        "sinon": "^7.4.1",
+        "sinon-chai": "^3.3.0"
+    }
+}
