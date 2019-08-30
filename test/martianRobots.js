@@ -3,6 +3,6 @@ var expect = chai.expect;
 
 describe('martianRobots', function () {
     it('true is true', function () {
-        expect(true).to.equal(false);
+        expect(true).to.equal(true);
     });
 });
