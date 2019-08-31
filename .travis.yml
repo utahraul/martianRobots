@@ -9,3 +9,4 @@ addons:
             secure: b842660c3fbc7912c547dff594ced21cae940127
 script:
     - sonar-scanner
+    - npm test
