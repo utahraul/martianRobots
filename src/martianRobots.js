@@ -1,4 +1,3 @@
-let output;
 let gridMaxWidth;
 let gridMaxHeight;
 
@@ -10,34 +9,37 @@ var processInput = function (inputString) {
     if (inputString === '') {
         throw new Error('Input string cannot be empty');
     }
-    else {
-        const martianRobotsData = inputString.split("\n");
-        const marsSize = martianRobotsData[0].split(" ");
-        gridMaxWidth = marsSize[0];
-        gridMaxHeight = marsSize[1];
 
-        verifyMarsSize(gridMaxWidth, gridMaxHeight);
+    const martianRobotsData = inputString.split("\n");
+    const marsSize = martianRobotsData[0].split(" ");
+    gridMaxWidth = marsSize[0];
+    gridMaxHeight = marsSize[1];
 
-        for (let i = 1; i < martianRobotsData.length; i = i + 2) {
-            var robotInitialPositionAndOrientation = setRobotInitialPositionAndOrientation(martianRobotsData[i]);
-            processRobotMovements(robotInitialPositionAndOrientation, martianRobotsData[i + 1]);
-        };
-    }
+    verifyMarsSize(gridMaxWidth, gridMaxHeight);
+
+    var output = "";
+    for (i = 1; i < martianRobotsData.length; i = i + 2) {
+        var robotInitialPositionAndOrientation = parseInitialPosition(martianRobotsData[i]);
+        output += processRobotMovements(robotInitialPositionAndOrientation, martianRobotsData[i + 1]) + "\n";
+    };
+    return output;
+
 }
 
 var verifyMarsSize = function (gridMaxWidth, gridMaxHeight) {
     if (gridMaxWidth > 50 || gridMaxWidth < 0 || gridMaxHeight > 50 || gridMaxHeight < 0) {
         throw new Error('Incorrect upper-right coordinates');
     }
-    else {
-        return;
-    }
+    return;
 }
 
-var setRobotInitialPositionAndOrientation = function (positionAndOrientation) {
-    let x = positionAndOrientation.split(' ')[0];
-    let y = positionAndOrientation.split(' ')[1];
-    let orientation = positionAndOrientation.split(' ')[2];
+var parseInitialPosition = function (positionAndOrientation) {
+
+    let instructions = positionAndOrientation.split(' ');
+    let x = instructions[0];
+    let y = instructions[1];
+    let orientation = instructions[2];
+
     return {
         "x": x,
         "y": y,

@@ -1,5 +1,5 @@
 {
-    "name": "martianRobots",
+    "name": "martian_robots",
     "description": "martianRobots",
     "main": "src/martianRobots.js",
     "directories": {
