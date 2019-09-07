@@ -27,4 +27,11 @@ describe('Given a new input ', function () {
             expect(function () { martianRobots('1 -1\n1 1 E\nRFRFRFRF\n3 2 N\nFRRFLLFFRRFLL\n0 3 W\nLLFFFLFLFL') }).to.throw(Error, 'Incorrect upper-right coordinates');
         });
     });
+
+    describe('with one robot and one movement data passed in ', function () {
+        it('should return 1 2 E', function () {
+            expect(martianRobots('5 5\n1 1 E\nF')).to.equal('1 2 E');
+        });
+    });
+
 });

@@ -18,7 +18,7 @@ var processInput = function (inputString) {
 
         verifyMarsSize(gridMaxWidth, gridMaxHeight);
 
-        for (i = 1; i < martianRobotsData.length; i = i + 2) {
+        for (let i = 1; i < martianRobotsData.length; i = i + 2) {
             var robotInitialPositionAndOrientation = setRobotInitialPositionAndOrientation(martianRobotsData[i]);
             processRobotMovements(robotInitialPositionAndOrientation, martianRobotsData[i + 1]);
         };
@@ -30,7 +30,7 @@ var verifyMarsSize = function (gridMaxWidth, gridMaxHeight) {
         throw new Error('Incorrect upper-right coordinates');
     }
     else {
-        return ('1 1 E\n3 3 N LOST\n2 3 S');
+        return;
     }
 }
 
@@ -46,12 +46,10 @@ var setRobotInitialPositionAndOrientation = function (positionAndOrientation) {
 }
 
 var processRobotMovements = function (robotInitialPositionAndOrientation, robotMovements) {
-    console.log(robotInitialPositionAndOrientation);
-    console.log(robotMovements);
 
-    for (var i = 0; i < robotMovements.length; i++) {
-        let moveToDo = robotMovements.charAt(i);
-        console.log(moveToDo);
+    for (let i = 0; i < robotMovements.length; i++) {
+        let movementToDo = robotMovements.charAt(i);
+        console.log(movementToDo);
     }
 
 }
