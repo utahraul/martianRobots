@@ -32,11 +32,19 @@ describe('Given a new input ', function () {
         it('should return 2 1 E', function () {
             expect(martianRobots('5 5\n1 1 E\nF')).to.equal('2 1 E\n');
         });
-    });   
-        
-    describe('with one robot and one movement data passed in ', function () {
-        it('should return 2 3 E', function () {
-            expect(martianRobots('5 5\n1 1 N\nFFRF')).to.equal('2 3 E\n');
+
+        it('should return 1 1 S', function () {
+            expect(martianRobots('5 5\n1 1 E\nR')).to.equal('1 1 S\n');
+        });
+
+        it('should return 1 1 N', function () {
+            expect(martianRobots('5 5\n1 1 E\nL')).to.equal('1 1 N\n');
+        });
+    });
+
+    describe('with one robot and some movements data passed in ', function () {
+        it('should return 1 2 E', function () {
+            expect(martianRobots('5 5\n1 1 N\nRF')).to.equal('1 2 E\n');
         });
     });
 });
