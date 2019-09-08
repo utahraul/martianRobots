@@ -54,10 +54,10 @@ function moveForward(currentPosition) {
     let y = currentPosition.y;
     let orientation = currentPosition.orientation;
 
-    if (orientation === 'N') y = y + 1;
-    if (orientation === 'W') x = x - 1;
-    if (orientation === 'S') y = y - 1;
-    if (orientation === 'E') x = x + 1;
+    if (orientation === 'N') {y = y + 1;}
+    else if (orientation === 'W') {x = x - 1;}
+    else if (orientation === 'S') {y = y - 1;}
+    else {x = x + 1;}
 
     let newPosition = {
         x: x,
@@ -72,10 +72,10 @@ function turnRight(currentPosition) {
     let y = currentPosition.y;
     let orientation = currentPosition.orientation;
 
-    if (orientation === 'N') orientation = 'E';
-    if (orientation === 'W') orientation = 'N';
-    if (orientation === 'S') orientation = 'W';
-    if (orientation === 'E') orientation = 'S';
+    if (orientation === 'N') { orientation = 'E'; }
+    else if (orientation === 'W') { orientation = 'N'; }
+    else if (orientation === 'S') { orientation = 'W'; }
+    else { orientation = 'S'; }
 
     let newPosition = {
         x: x,
@@ -90,10 +90,10 @@ function turnLeft(currentPosition) {
     let y = currentPosition.y;
     let orientation = currentPosition.orientation;
 
-    if (orientation === 'N') orientation = 'W';
-    if (orientation === 'W') orientation = 'S';
-    if (orientation === 'S') orientation = 'E';
-    if (orientation === 'E') orientation = 'N';
+    if (orientation === 'N') { orientation = 'W'; }
+    else if (orientation === 'W') { orientation = 'S'; }
+    else if (orientation === 'S') { orientation = 'E'; }
+    else { orientation = 'N'; }
 
     let newPosition = {
         x: x,

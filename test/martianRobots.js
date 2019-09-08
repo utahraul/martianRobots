@@ -44,7 +44,7 @@ describe('Given a new input ', function () {
 
     describe('with one robot and some movements data passed in ', function () {
         it('should return 1 2 E', function () {
-            expect(martianRobots('5 5\n1 1 N\nRF')).to.equal('1 2 E\n');
+            expect(martianRobots('5 5\n1 1 N\nRF')).to.equal('2 1 E\n');
         });
     });
 });
