@@ -29,9 +29,14 @@ describe('Given a new input ', function () {
     });
 
     describe('with one robot and one movement data passed in ', function () {
-        it('should return 1 2 E', function () {
+        it('should return 2 1 E', function () {
             expect(martianRobots('5 5\n1 1 E\nF')).to.equal('2 1 E\n');
         });
+    });   
+        
+    describe('with one robot and one movement data passed in ', function () {
+        it('should return 2 3 E', function () {
+            expect(martianRobots('5 5\n1 1 N\nFFRF')).to.equal('2 3 E\n');
+        });
     });
-
 });

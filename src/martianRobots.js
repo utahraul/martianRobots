@@ -19,7 +19,7 @@ var processInput = function (inputString) {
     for (let i = 1; i < martianRobotsData.length; i = i + 2) {
         var robotInitialPositionAndOrientation = parseInitialPosition(martianRobotsData[i]);
         output += processRobotMovements(robotInitialPositionAndOrientation, martianRobotsData[i + 1]) + "\n";
-    };
+    }
     return output;
 }
 
@@ -44,7 +44,7 @@ var processRobotMovements = function (robotInitialPositionAndOrientation, robotM
         if (movementToDo === 'L') robotInitialPositionAndOrientation = turnLeft(robotInitialPositionAndOrientation);
         if (movementToDo === 'R') robotInitialPositionAndOrientation = turnRight(robotInitialPositionAndOrientation);
         if (movementToDo === 'F') robotInitialPositionAndOrientation = moveForward(robotInitialPositionAndOrientation);
-    };
+    }
     let finalPosition = robotInitialPositionAndOrientation.x + ' ' + robotInitialPositionAndOrientation.y + ' ' + robotInitialPositionAndOrientation.orientation;
     return (finalPosition);
 };
@@ -65,7 +65,7 @@ function moveForward(currentPosition) {
         orientation: orientation
     };
     return newPosition;
-};
+}
 
 function turnRight(currentPosition) {
     let x = currentPosition.x;
@@ -83,7 +83,7 @@ function turnRight(currentPosition) {
         orientation: orientation
     };
     return newPosition;
-};
+}
 
 function turnLeft(currentPosition) {
     let x = currentPosition.x;
@@ -101,6 +101,6 @@ function turnLeft(currentPosition) {
         orientation: orientation
     };
     return newPosition;
-};
+}
 
 module.exports = martianRobots;
