@@ -20,7 +20,6 @@ var processInput = function (inputString) {
         var robotInitialPositionAndOrientation = parseInitialPosition(martianRobotsData[i]);
         output += processRobotMovements(robotInitialPositionAndOrientation, martianRobotsData[i + 1]) + "\n";
     };
-
     return output;
 }
 
@@ -59,7 +58,7 @@ function moveForward(currentPosition) {
     if (orientation === 'W') x = x - 1;
     if (orientation === 'S') y = y - 1;
     if (orientation === 'E') x = x + 1;
-    
+
     let newPosition = {
         x: x,
         y: y,
