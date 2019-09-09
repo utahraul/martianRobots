@@ -54,8 +54,7 @@ var processRobotMovements = function (robotInitialPositionAndOrientation, robotM
         if (movementToDo === 'R') robotInitialPositionAndOrientation = turnRight(robotInitialPositionAndOrientation);
         if (movementToDo === 'F') robotInitialPositionAndOrientation = moveForward(robotInitialPositionAndOrientation);
     }
-    let finalPosition = robotInitialPositionAndOrientation.x + ' ' + robotInitialPositionAndOrientation.y + ' ' + robotInitialPositionAndOrientation.orientation;
-    return (finalPosition);
+    return (robotInitialPositionAndOrientation.x + ' ' + robotInitialPositionAndOrientation.y + ' ' + robotInitialPositionAndOrientation.orientation);
 };
 
 function moveForward(currentPosition) {
@@ -81,12 +80,11 @@ function turnRight(currentPosition) {
     else if (orientation === 'S') { orientation = 'W'; }
     else { orientation = 'S'; }
 
-    let newPosition = {
+    return {
         x: x,
         y: y,
         orientation: orientation
     };
-    return newPosition;
 }
 
 function turnLeft(currentPosition) {
@@ -99,12 +97,11 @@ function turnLeft(currentPosition) {
     else if (orientation === 'S') { orientation = 'E'; }
     else { orientation = 'N'; }
 
-    let newPosition = {
+    return {
         x: x,
         y: y,
         orientation: orientation
     };
-    return newPosition;
 }
 
 function verifyIfRobotIsLost(x, y, orientation) {
@@ -141,12 +138,11 @@ function verifyIfRobotIsLost(x, y, orientation) {
         };
     }
     isLost = false;
-    let newPosition = {
+    return {
         x: x,
         y: y,
         orientation: orientation
     };
-    return newPosition;
 }
 
 module.exports = martianRobots;
