@@ -43,8 +43,26 @@ describe('Given a new input ', function () {
     });
 
     describe('with one robot and some movements data passed in ', function () {
-        it('should return 1 2 E', function () {
+        it('should return 2 1 E', function () {
             expect(martianRobots('5 5\n1 1 N\nRF')).to.equal('2 1 E\n');
+        });
+    });
+
+    describe('with one robot and some movements data passed in ', function () {
+        it('should return 2 1 E', function () {
+            expect(martianRobots('5 5\n1 1 N\nRF')).to.equal('2 1 E\n');
+        });
+    });
+
+    describe('with one robot to be lost data passed in ', function () {
+        it('should return 1 5 N LOST', function () {
+            expect(martianRobots('5 5\n1 1 N\nFRLFFFF')).to.equal('1 5 N LOST\n');
+        });
+    });
+
+    describe('with the final data passed in ', function () {
+        it('should return the right', function () {
+            expect(martianRobots('5 3\n1 1 E\nRFRFRFRF\n3 2 N\nFRRFLLFFRRFLL\n0 2 W\nLLFFFLFLFL')).to.equal('1 1 E\n3 3 N LOST\n2 3 S\n');
         });
     });
 });
