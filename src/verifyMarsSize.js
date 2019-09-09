@@ -1,6 +1,4 @@
-var verifyMarsSize = function (marsSize) {
-    const gridMaxWidth = marsSize[0];
-    const gridMaxHeight = marsSize[1];
+var verifyMarsSize = function (gridMaxWidth, gridMaxHeight) {
 
     if (gridMaxWidth > 50 || gridMaxWidth < 0 || gridMaxHeight > 50 || gridMaxHeight < 0) {
         throw new Error('Incorrect upper-right coordinates');
