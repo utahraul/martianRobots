@@ -61,7 +61,7 @@ describe('Given a new input ', function () {
     });
 
     describe('with the final data passed in ', function () {
-        it('should return the right', function () {
+        it('should return the right output', function () {
             expect(martianRobots('5 3\n1 1 E\nRFRFRFRF\n3 2 N\nFRRFLLFFRRFLL\n0 2 W\nLLFFFLFLFL')).to.equal('1 1 E\n3 3 N LOST\n2 3 S\n');
         });
     });
