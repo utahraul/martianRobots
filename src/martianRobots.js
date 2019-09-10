@@ -4,7 +4,7 @@ var gridMaxHeight;
 
 function martianRobots (inputString) {
     return (processInput(inputString));
-};
+}
 
 function processInput (inputString) {
 
@@ -55,7 +55,7 @@ function processRobotMovements (robotInitialPositionAndOrientation, robotMovemen
         if (movementToDo === 'F') robotInitialPositionAndOrientation = moveForward(robotInitialPositionAndOrientation);
     }
     return (robotInitialPositionAndOrientation.x + ' ' + robotInitialPositionAndOrientation.y + ' ' + robotInitialPositionAndOrientation.orientation);
-};
+}
 
 function moveForward(currentPosition) {
     let x = currentPosition.x;
