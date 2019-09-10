@@ -2,11 +2,11 @@ var verifyMarsSize = require('./../src/verifyMarsSize.js');
 var gridMaxWidth;
 var gridMaxHeight;
 
-var martianRobots = function (inputString) {
+function martianRobots (inputString) {
     return (processInput(inputString));
 };
 
-var processInput = function (inputString) {
+function processInput (inputString) {
 
     if (inputString === '') {
         throw new Error('Input string cannot be empty');
@@ -28,7 +28,7 @@ var processInput = function (inputString) {
     return output;
 }
 
-var parseInitialPosition = function (positionAndOrientation) {
+function parseInitialPosition (positionAndOrientation) {
 
     let instructions = positionAndOrientation.split(' ');
     let x = parseInt(instructions[0]);
@@ -44,7 +44,7 @@ var parseInitialPosition = function (positionAndOrientation) {
 
 var isLost = false;
 
-var processRobotMovements = function (robotInitialPositionAndOrientation, robotMovements) {
+function processRobotMovements (robotInitialPositionAndOrientation, robotMovements) {
 
     isLost = false;
 
